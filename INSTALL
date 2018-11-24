@@ -2,6 +2,7 @@
 set -e
 
 CURRENTDIR=$(pwd)
+HOSTNAME="brain_node"
 
 # Make sure only root can run our script
 if [ "$(id -u)" != "0" ]; then
@@ -13,9 +14,10 @@ fi
 git submodule update --init --recursive
 
 # Change the hostname
-sed -i '/raspberrypi/c\brain_node' /etc/hosts
-echo brain_node >> /etc/hostname
-echo brain_node >> /boot/hostnames
+sed -i "s/raspberrypi/$HOSTNAME" /etc/hosts
+echo $HOSTNAME >> /etc/hostname
+echo $HOSTNAME >> /boot/hostnames
+echo "Hostname changed to $HOSTNAME"
 
 # Install the ROS master
 cd $CURRENTDIR/ros_master/social_interaction
