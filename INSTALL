@@ -9,14 +9,20 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
+# Update all packages
 git submodule update --init --recursive
 
+# Change the hostname
+sed -i '/raspberrypi/c\brain_node' /etc/hosts
+echo brain_node >> /etc/hostname
+echo brain_node >> /boot/hostnames
+
 # Install the ROS master
-# cd $CURRENTDIR/ros_master/social_interaction
-# exec ./INSTALL
+cd $CURRENTDIR/ros_master/social_interaction
+exec ./INSTALL
 
 # Install the brain
-# cd $CURRENTDIR/brain/social_interaction
-# exec ./INSTALL
+cd $CURRENTDIR/brain/social_interaction
+exec ./INSTALL
 
 cd $CURRENTDIR
