@@ -1,0 +1,3 @@
+[submodule "components/ros_master"]
+	path = components/ros_master
+	url = https://github.com/Windesheim-Willy/ros_master.git
