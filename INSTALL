@@ -29,4 +29,7 @@ exec ./INSTALL
 
 cd $CURRENTDIR
 
-sudo reboot now
+ln -s $CURRENTDIR/START /etc/init.d/willy
+update-rc.d willy defaults
+
+reboot now

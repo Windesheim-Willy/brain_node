@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+cd /opt/willy
+
 case "$1" in
 start)
   exec ./components/ros_master/START start
