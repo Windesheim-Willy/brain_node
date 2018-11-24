@@ -14,7 +14,7 @@ fi
 git submodule update --init --recursive
 
 # Change the hostname
-sed -i "s/raspberrypi/$HOSTNAME" /etc/hosts
+sed -i "/raspberrypi/$HOSTNAME" /etc/hosts
 echo $HOSTNAME >> /etc/hostname
 echo $HOSTNAME >> /boot/hostnames
 echo "Hostname changed to $HOSTNAME"
