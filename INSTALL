@@ -20,11 +20,11 @@ echo $HOSTNAME >> /boot/hostnames
 echo "Hostname changed to $HOSTNAME"
 
 # Install the ROS master
-cd $CURRENTDIR/ros_master/social_interaction
+cd $CURRENTDIR/components/ros_master
 exec ./INSTALL
 
 # Install the brain
-cd $CURRENTDIR/brain/social_interaction
+cd $CURRENTDIR/components/brain
 exec ./INSTALL
 
 cd $CURRENTDIR
