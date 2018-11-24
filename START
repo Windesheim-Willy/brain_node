@@ -6,12 +6,12 @@ cd /opt/willy
 
 case "$1" in
 start)
-  exec ./components/ros_master/START start
-  exec ./components/brain/START start
+  exec ./components/ros_master/START start &>/dev/null &
+  exec ./components/brain/START start &>/dev/null &
   ;;
 stop)
-  exec ./components/ros_master/START stop
-  exec ./components/brain/START stop
+  exec ./components/ros_master/START stop &>/dev/null &
+  exec ./components/brain/START stop &>/dev/null &
   ;;
 restart)
   $0 stop
