@@ -36,6 +36,5 @@ This node contains the ROS master and brain of Willy.
 cd /opt
 sudo git clone https://github.com/Windesheim-Willy/brain_node.git willy
 cd willy
-sudo git checkout feature/infrastructure # TODO remove
 sudo ./INSTALL
 ```
