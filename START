@@ -2,7 +2,6 @@
 # /etc/init.d/willy
 #
 
-
 cd /opt/willy
 
 case "$1" in
