@@ -30,6 +30,6 @@ exec ./INSTALL
 cd $CURRENTDIR
 
 ln -s $CURRENTDIR/START /etc/init.d/willy
-update-rc.d willy defaults
+update-rc.d willy enable
 
 reboot now
