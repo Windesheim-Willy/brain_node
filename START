@@ -1,5 +1,7 @@
 #!/bin/bash
-set -e
+# /etc/init.d/willy
+#
+
 
 cd /opt/willy
 
@@ -17,7 +19,7 @@ restart)
   $0 start
   ;;
 *)
-  echo "Usage: $0 {start|stop|status|restart}"
+  echo "Usage: $0 {start|stop|restart}"
 esac
 
 exit 0
