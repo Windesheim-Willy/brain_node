@@ -15,8 +15,8 @@ git submodule update --init --recursive
 
 # Change the hostname
 sed -i "s/raspberrypi/${HOSTNAME}/g" /etc/hosts
-echo $HOSTNAME >> /etc/hostname
-echo $HOSTNAME >> /boot/hostnames
+echo $HOSTNAME > /etc/hostname
+echo $HOSTNAME > /boot/hostnames
 echo "Hostname changed to $HOSTNAME"
 
 # Install the ROS master
@@ -28,3 +28,5 @@ cd $CURRENTDIR/components/brain
 exec ./INSTALL
 
 cd $CURRENTDIR
+
+sudo reboot now
