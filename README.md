@@ -38,3 +38,6 @@ sudo git clone https://github.com/Windesheim-Willy/brain_node.git willy
 cd willy
 sudo ./INSTALL
 ```
+
+## Startup will software
+The software will start up on the boot of the Raspberry PI otherwise, use `service willy start`
